@@ -1,0 +1,455 @@
+@import "compass/reset";
+@import "compass/css3";
+
+$text-color: #58575F;
+$body-color: #F2EEE8;
+$post-bg-color: #FFFBF5;
+$gray-text-color: #C6C1B0;
+$blue-bg-color: #80a8cc;
+$transform-white-color: rgba(255, 255, 255, 0);
+$background-color: #FFFBF5;
+$main-body-background-color: #F2EEE8;
+$light-grey-font-color: #D9D4C7;
+
+html {
+  text-align: center;
+}
+
+body {
+  font-family: 'Open Sans', 'Roboto', sans-serif;
+  font-weight: lighter;
+
+  font-size: 62.5%;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  border: 1px solid gainsboro;
+  border-top: none;
+  border-bottom: none;
+  display: inline-block;
+}
+
+.page_header {
+  width: 100%;
+  height: 8em;
+  background-color: $background-color;
+
+  @include box-shadow(rgba(gray, 0.3) 0 1.5px inset);
+  > * {
+    float: left;
+    width: 33.33%;
+  }
+}
+
+.header_left {
+  ul {
+    li {
+      float: left;
+      position: relative;
+      margin: 2.2em 1em 0;
+
+      width: 4em;
+      height: 4em;
+
+      background-color: $transform-white-color;
+
+      border: 1px solid gainsboro;
+      box-shadow: none;
+      @include border-radius(100%);
+      @include box-sizing(border-box);
+
+      p {
+        color: black;
+
+        text-align: center;
+        font-weight: 800;
+        font-size: 2em;
+        padding-top: 0.43em;
+      }
+    }
+
+    li:first-child {
+      margin: 2.2em 3.5em 0 2.1em;
+      background-color: $blue-bg-color;
+      border: none;
+      p {
+        color: white;
+      }
+    }
+  }
+}
+
+.header_mid {
+  text-align: center;
+
+  .icon-twitter {
+    margin-top: 0.8em;
+
+    color: $blue-bg-color;
+    font-weight: 800;
+    font-size: 3em;
+  }
+}
+
+.header_right {
+  > * {
+    float: left;
+    display: inline-block;
+  }
+
+  .search_group {
+    width: 45%;
+    margin-left: 16em;
+    margin-top: 2em;
+    position: relative;
+    input {
+      border: 1px solid gainsboro;
+      background-color: $transform-white-color;
+      height: 3.7em;
+      vertical-align: middle;
+      @include box-sizing(border-box);
+    }
+    input[type='text'] {
+      padding-left: 1em;
+      width: 80%;
+      border-right-width: 0;
+      @include border-radius(2em 0 0 2em);
+    }
+    input[type='button'] {
+      width: 20%;
+      border-left-width: 0;
+      @include border-radius(0 2em 2em 0);
+    }
+    p {
+      position: absolute;
+      top: 0.9em;
+      left: 11.5em;
+
+      color: #605e58;
+      font-weight: 200;
+      font-size: 1.5em;
+    }
+  }
+
+  .avatar {
+    margin-left: 2em;
+
+    img {
+      width: 4em;
+      height: 4em;
+      margin-top: 1.9em;
+      @include border-radius(100%);
+    }
+  }
+}
+
+.blogger {
+  > * {
+    text-align: center;
+  }
+
+  padding-top: 3.7em;
+  padding-bottom: 2.9em;
+
+  color: white;
+  font-size: 1.5em;
+
+  .avatar {
+    padding-bottom: 1em;
+    text-align: center;
+
+    img {
+      width: 6.7em;
+      height: 6.7em;
+      @include border-radius(100%);
+    }
+  }
+
+  .author {
+    font-size: 1.4em;
+    padding-bottom: 0.4em;
+    font-weight: normal;
+  }
+
+  .introduce {
+    margin-left: 1em;
+    margin-right: 1em;
+    line-height: 1.3em;
+  }
+
+  .website_group {
+    > * {
+      display: inline;
+    }
+
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+    font-size: 1.1em;
+  }
+
+  .follow {
+    margin-right: auto;
+    margin-left: auto;
+    button {
+      width: 9.5em;
+      background-color: #6C93B7;
+
+      line-height: 2.1em;
+      font-size: 1.1em;
+      font-weight: lighter;
+      color: white;
+
+      border-width: 0;
+      @include border-radius(2em);
+    }
+  }
+}
+
+.photo_wall {
+  width: 100%;
+  ul {
+    li {
+      float: left;
+      width: 33.33%;
+      margin-top: -0.2em;
+      img {
+        border: none;
+        height: 10em;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.activities {
+  margin-left: 2.8em;
+  padding-top: 33em;
+  padding-bottom: 9.5em;
+  .activity {
+    padding-bottom: 0.5em;
+
+    font-size: 1.5em;
+    font-weight: normal;
+    color: white;
+  }
+  ul {
+    li {
+      > * {
+        display: inline;
+      }
+      font-size: 1.5em;
+      line-height: 2em;
+
+      color: #6C93B7;
+      p:first-child {
+        padding-right: 0.5em;
+      }
+      span:last-child {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.left_aside {
+  float: left;
+  width: 22%;
+  background-color: $blue-bg-color;
+}
+
+.main_body {
+  float: left;
+  width: 56%;
+  background-color: $main-body-background-color;
+  padding-bottom: 17.2em;
+}
+
+.profile {
+  width: 100%;
+  text-align: center;
+  ul {
+    padding-top: 4em;
+    display: inline-block;
+    li {
+      background-color: $background-color;
+      text-align: center;
+      float: left;
+      //      @include box-shadow(rgba($blue-bg-color, 0.3) 0 -3px inset);
+      padding: 1.3em 1.9em;
+
+      font-size: 1.7em;
+      .item {
+        color: $light-grey-font-color;
+      }
+      .number {
+        padding-top: 0.1em;
+        font-weight: bold;
+      }
+    }
+
+    li:first-child {
+      padding-left: 2.6em;
+      @include box-shadow(rgba($blue-bg-color, 0.3) 0 -3px inset);
+    }
+
+    li:last-child {
+      padding-right: 2.6em;
+    }
+  }
+}
+
+.blog_list {
+  width: 90%;
+  padding-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+
+  ul {
+    li {
+      > * {
+        float: left;
+      }
+      overflow: hidden;
+      padding-top: 3em;
+      padding-bottom: 3em;
+      padding-right: 2.5em;
+      background-color: $background-color;
+      border-bottom: 1px solid gainsboro;
+
+
+      color: #B8B39F;
+      .blogger_author {
+        padding-left: 3.5em;
+        padding-right: 1.5em;
+        img {
+          width: 4em;
+          height: 4em;
+          @include border-radius(100%);
+        }
+      }
+      .blog_body {
+        width: 85%;
+        overflow: hidden;
+
+        .blog_header {
+          > * {
+            float: left;
+          }
+          overflow: hidden;
+          padding-top: 0.2em;
+          font-size: 1.5em;
+          .name {
+            font-weight: bold;
+            color: #42434F;
+          }
+          .email {
+            padding-left: 1em;
+            color: #B8B39F;
+          }
+          p:last-child {
+            float: right;
+          }
+        }
+        .blog {
+          float: left;
+          padding-top: 0.5em;
+          font-size: 1.5em;
+          line-height: 1.3em;
+          color: #86847F;
+        }
+        .blog_footer {
+          overflow: hidden;
+          width: 100%;
+          float: left;
+          padding-top: 1.2em;
+          font-size: 1.4em;
+
+          p {
+            float: left;
+            padding-right: 1.5em;
+          }
+          p:last-child {
+            float: right;
+            padding-right: 0;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.right_aside {
+  float: left;
+  width: 22%;
+  background-color: $background-color;
+  padding-bottom: 42em;
+}
+
+.trands {
+  padding-left: 3.4em;
+  padding-top: 4em;
+  p {
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+  ul {
+    padding-top: 1.8em;
+    li {
+      font-size: 1.5em;
+      line-height: 1.57em;
+      a {
+        color: #77A3CB;
+      }
+    }
+  }
+}
+
+.follows {
+  padding-left: 3.4em;
+  padding-top: 3.8em;
+  padding-right: 5em;
+}
+
+.follow_header {
+  font-size: 1.5em;
+
+  > * {
+    display: inline-block;
+  }
+  a {
+    color: #77A3CB;
+    float: right;
+  }
+}
+
+.follow_list {
+  ul {
+    li {
+      > * {
+        display: inline-block;
+        float: left;
+      }
+      overflow: hidden;
+      padding-top: 1.5em;
+      img {
+        width: 4em;
+        height: 4em;
+        @include border-radius(100%);
+      }
+      .follower_info {
+        padding-left: 1em;
+        font-size: 1.5em;
+        line-height: 1.5em;
+      }
+      .follow_right_aside {
+        color: #B8B39F;
+        margin-left: 2em;
+        padding: 0.4em;
+        border: 1px solid gainsboro;
+      }
+    }
+  }
+}
