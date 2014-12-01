@@ -73,7 +73,7 @@ body {
   font-family: 'Open Sans', 'Roboto', sans-serif;
   font-weight: lighter;
   font-size: 62.5%;
-  width: 85%;
+  width: 94%;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
@@ -353,7 +353,7 @@ body {
   background-color: #FFFBF5;
   text-align: center;
   float: left;
-  padding: 1.3em 1.9em;
+  padding: 1.3em 2.1em;
   font-size: 1.7em;
 }
 /* line 283, ../sass/style.scss */
